@@ -35,31 +35,31 @@ return:
 ;Draw a 4x4 dot in the center of a 20x20 grid
 draw_dot:
 	pusha
-	mov al, 0xA		;Set brown color
+	mov al, 0x5		;Set brown color
 	add cx, 20		;Set x as cx+9
 	add dx, 140		;Set y as dx+9
 	int 0x10 		;Draw the x,y pixel
-	inc dx
-	int 0x10
-	inc dx
-	int 0x10
-	sub dx, 2
-	inc cx
-	int 0x10
-	inc cx
-	int 0x10
-	dec cx
-	inc dx
-	int 0x10
-	inc dx
-	int 0x10
-	dec dx
-	inc cx
-	int 0x10
-	inc dx
-	int 0x10
-	popa
-	ret
+	inc dx          ;
+	int 0x10        ;
+	inc dx          ;
+	int 0x10        ;
+	sub dx, 2       ;
+	inc cx          ;
+	int 0x10        ;
+	inc cx          ;
+	int 0x10        ;
+	dec cx          ;
+	inc dx          ;
+	int 0x10        ;
+	inc dx          ;
+	int 0x10        ;
+	dec dx          ;
+	inc cx          ;
+	int 0x10        ;
+	inc dx          ;
+	int 0x10        ;
+	popa            ;
+	ret             ;
 
 
 ;Game main loop
